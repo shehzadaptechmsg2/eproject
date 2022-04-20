@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row ">
+            <h1 class="display-1 text-center">Compare Page</h1>
+            <div class="col-lg-4 col-md-6 offset-2">
+                
+                <div class="form-group">
+                    <label for="">Select Brand</label>
+                    <select name="" id="brand1" onchange="brand1()" class="form-select">
+                        <option >Select</option>
+                        <option >Apple</option>
+                        <option >Samsung</option>
+                        <option >Mi</option>
+                        <option >LG</option>
+                        <option >Huawei</option>
+                        <option >Nokia</option>
+                        <option >One Plus</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Select Product</label>
+                    <select name="" id="product1"  onchange="product1()" class="form-select">
+                        <!-- <option >Apple</option>
+                        <option >Samsung</option>
+                        <option >Mi</option>
+                        <option >LG</option>
+                        <option >Huawei</option>
+                        <option >Nokia</option>
+                        <option >One Plus</option> -->
+                    </select>
+                </div>
+                <div class="form-group" id="showproduct1">
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 ">
+                
+                <div class="form-group">
+                    <label for="">Select Brand</label>
+                    <select name="" id="brand2" onchange="brand2()" class="form-select">
+                        <option >Select</option>
+                        <option >Apple</option>
+                        <option >Samsung</option>
+                        <option >Mi</option>
+                        <option >LG</option>
+                        <option >Huawei</option>
+                        <option >Nokia</option>
+                        <option >One Plus</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Select Product</label>
+                    <select name="" id="product2"  onchange="product2()" class="form-select">
+                        <!-- <option >Apple</option>
+                        <option >Samsung</option>
+                        <option >Mi</option>
+                        <option >LG</option>
+                        <option >Huawei</option>
+                        <option >Nokia</option>
+                        <option >One Plus</option> -->
+                    </select>
+                </div>
+                <div class="form-group" id="showproduct2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function brand1(){
+        var first_brand=document.getElementById("brand1").value;
+        var first_product=document.getElementById("product1");
+        switch(first_brand){
+            case 'Apple':first_product.innerHTML=`
+            
+                        <option >Select</option>
+                        <option >Iphone 13</option>
+                        <option >Iphone 12</option>
+                        <option >Iphone 11</option>
+                        <option >Iphone X</option>
+                        <option >Iphone XR</option>
+            
+            `;
+            break;
+            case 'Samsung':first_product.innerHTML=`
+            
+            <option >Select</option>
+            <option >Samsung Galaxy S22 Ultra</option>
+            <option >Samsung Galaxy S21</option>
+            <option >Samsung Galaxy S20</option>
+            <option >Samsung Galaxy S10</option>
+            <option >Samsung Galaxy S9</option>
+
+`;
+break;
+
+
+        }
+      }
+      function product1(){
+        var first_product=document.getElementById("product1").value;
+        var showproduct1=document.getElementById("showproduct1");
+
+        switch(first_product){
+
+            case 'Iphone 13':showproduct1.innerHTML=`
+            <div class="card">
+    <div class="card-body">
+        <img src="assets/images/iphone13.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1 class="display-3">Iphone 13 </h1>
+            <p class="lead">Lorem ipsum dolor sit amet.</p>
+            <p class="lead">Price 1000$</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+            `;
+            break;
+            case 'Iphone 12':showproduct1.innerHTML=`
+            <div class="card">
+    <div class="card-body">
+        <img src="assets/images/iphone12.png" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1 class="display-3">Iphone 12 </h1>
+            <p class="lead">Lorem ipsum dolor sit amet.</p>
+            <p class="lead">Price 900$</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+            `;
+            break;
+
+        }
+
+
+      }
+
+      function brand2(){
+        var first_brand=document.getElementById("brand2").value;
+        var first_product=document.getElementById("product2");
+        switch(first_brand){
+            case 'Apple':first_product.innerHTML=`
+            
+                        <option >Select</option>
+                        <option >Iphone 13</option>
+                        <option >Iphone 12</option>
+                        <option >Iphone 11</option>
+                        <option >Iphone X</option>
+                        <option >Iphone XR</option>
+            
+            `;
+            break;
+            case 'Samsung':first_product.innerHTML=`
+            
+            <option >Select</option>
+            <option >Samsung Galaxy S22 Ultra</option>
+            <option >Samsung Galaxy S21</option>
+            <option >Samsung Galaxy S20</option>
+            <option >Samsung Galaxy S10</option>
+            <option >Samsung Galaxy S9</option>
+
+`;
+break;
+
+
+        }
+      }
+      function product2(){
+        var first_product=document.getElementById("product2").value;
+        var showproduct1=document.getElementById("showproduct2");
+
+        switch(first_product){
+
+            case 'Iphone 13':showproduct1.innerHTML=`
+            <div class="card">
+    <div class="card-body">
+        <img src="assets/images/iphone13.jpg" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1 class="display-3">Iphone 13 </h1>
+            <p class="lead">Lorem ipsum dolor sit amet.</p>
+            <p class="lead">Price 1000$</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+            `;
+            break;
+            case 'Iphone 12':showproduct1.innerHTML=`
+            <div class="card">
+    <div class="card-body">
+        <img src="assets/images/iphone12.png" alt="" class="img-fluid">
+        <div class="card-title">
+            <h1 class="display-3">Iphone 12 </h1>
+            <p class="lead">Lorem ipsum dolor sit amet.</p>
+            <p class="lead">Price 900$</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+            `;
+            break;
+
+        }
+
+
+      }
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
